@@ -1,6 +1,13 @@
 #include <stdio.h>
-int main (void)
+
+/**
+ *  main - strings printed using puts
+ *  followed by  a new line
+ *  Return: always 0 on (success)
+ */
+
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle\n");
-	return(0);
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
 }
