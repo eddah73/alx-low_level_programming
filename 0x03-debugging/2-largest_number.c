@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * largest_number - returns the largest of 3 numbers
+ * largest_number - checks the largest integer
  * @a: first integer
  * @b: second integer
  * @c: third integer
@@ -32,6 +32,6 @@ else
 {
 largest = a;
 }
-
 return (largest);
 }
+
