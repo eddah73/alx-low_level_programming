@@ -16,3 +16,4 @@ set_string(&s1, s0);
 printf("%s, %s\n", s0, s1);
 return (0);
 }
+
