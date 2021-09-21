@@ -1,5 +1,5 @@
-#if ndef MAIN_H
-#define MAIN_H
+#if ndef HOLBERTON_H
+#define HOLBERTON_H
 
 #include <stdio.h>
 #include <stdlib.h>
