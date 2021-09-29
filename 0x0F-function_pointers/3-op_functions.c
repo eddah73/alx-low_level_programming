@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 /*addition*/
 int op_add(int a, int b)
 {
