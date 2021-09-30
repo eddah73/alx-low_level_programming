@@ -1,29 +1,49 @@
-#include "3-calc.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - main program
- * @ac: int, nbr parameters
- * @av: pointer to an array of char
+ * print_opcodes - print the opcodes of this program
+ * @a: address of the main function
+ * @n: number of bytes to print
  *
- * Return: int
+ * Return: void
  */
-int main(int ac, char *av[])
+void print_opcodes(char *a, int n)
 {
-	int number = 0;
-	int num1 = 0;
+	int i;
 
-	if (ac != 2)
+	for (i = 0; i < n; i++)
+	{
+		printf("%.2hhx", a[i]);
+		if (i < n - 1)
+			printf(" ");
+	}
+	printf("\n");
+
+}
+
+/**
+ * main - prints the opcodes of its own main function
+ * @argc: number of arguments passed to the function
+ * @argv: array of pointers to arguments
+ *
+ * Return: always O
+ */
+int main(int argc, char **argv)
+{
+	int n;
+
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	num1 = atoi(*(av + 1));
-	if (num1 < 0)
+	n = atoi(argv[1]);
+	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
+	print_opcodes((char *)&main, n);
 	return (0);
 }
